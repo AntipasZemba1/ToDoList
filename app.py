@@ -17,7 +17,7 @@ def add_task():
     print("Task added!")
 
 # Function to display all tasks with their completion status
-def view_tasks()
+def view_tasks():
     if not tasks:
         print("No tasks in your list.") # To inform user if the list is empty
         for index, t in enumarate(tasks, start=1):
@@ -36,4 +36,18 @@ def mark_completed():
         else:
             print("Invalid task number.")
     except ValueError:
-        print("Please enter a valid number.") # Hundle non-integer input
+        print("Please enter a valid number.") # Handle non-integer input
+
+#function to delete a task from list
+def delete_task():
+    view_tasks() # Show current tasks
+    try:
+        num = int(input("Please enter task number to delete: "))
+        if 1 <= num <= len(tasks):
+            removed = tasks.pop(num - 1) # remove the selected task
+            print(f"Remove task: {removed['task']}")
+        else:
+            print("Invalid task number.")
+    except ValueError:
+        print("Please enter a valid number.") # Handle non-integer input
+        
