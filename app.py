@@ -38,7 +38,7 @@ def mark_completed():
     except ValueError:
         print("Please enter a valid number.") # Handle non-integer input
 
-#function to delete a task from list
+# function to delete a task from list
 def delete_task():
     view_tasks() # Show current tasks
     try:
@@ -51,3 +51,21 @@ def delete_task():
     except ValueError:
         print("Please enter a valid number.") # Handle non-integer input
         
+# Main loop: continually show thw menu and respond to user choices.
+while True:
+    show_menu()
+    choice = input("Choose an option (1-5): ")
+
+    if choice == "1":
+        add_task()
+    elif choice == "2":
+        view_tasks()
+    elif choice == "3":
+        mark_completed()
+    elif choice == "4":
+        delete_tasks()
+    elif choice == "5":
+        print("Goodbye!") # Exit the program
+        break
+    else:
+        print("Invalid option. Try again.") # handle unexpected input
