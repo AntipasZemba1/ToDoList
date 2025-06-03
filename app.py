@@ -15,3 +15,13 @@ def add_task():
     task = input("Please enter a new task: ")
     tasks.append({"task":task, "done": False})
     print("Task added!")
+
+# Function to display all tasks with their completion status
+def view_tasks()
+    if not tasks:
+        print("No tasks in your list.") # To inform user if the list is empty
+        for index, t in enumarate(tasks, start=1):
+            # show ✅ for completed tasks, ❌ for incomplete
+            status = "✅" if t ["done"] else "❌"
+            print(f"{index}. {t['task']} [{status}]")
+
