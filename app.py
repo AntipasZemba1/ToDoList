@@ -11,3 +11,9 @@ def show_menu():
     print("4. Delete Task")
     print("5. Exit")
 
+# Function to add a new task to the list
+def add_task():
+    task = input("Enter a new task: ")
+    tasks.append({"task": task, "done": False})
+    print("Task added!")
+
